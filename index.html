@@ -6,12 +6,12 @@
     <title>Connor Everetts</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <style>
-        body {
+       body {
             font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: 27px;
+            font-weight: 400; /* Lighter font weight for body */
+            font-size: 18px; /* Smaller font size for body text */
             color: #333237;
-            background: white;
+            background: #f8f8f8; /* Subtle background color */
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -22,54 +22,55 @@
             justify-content: space-between;
             align-items: center;
             background: white;
-            padding: 10px 10px;
-            border-bottom: 1px solid #ddd;
+            padding: 20px 30px; /* Increased padding */
+            border-bottom: 2px solid #ddd;
         }
         
         .brand-name {
             color: #333237;
-            font-size: 1.5rem;
-        }
-        
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        
-        nav ul li {
-            margin-left: 20px;
+            font-size: 2rem; /* Larger brand name */
         }
         
         nav ul li a {
             color: #333237;
-            text-align: center;
             padding: 10px 12px;
             text-decoration: none;
             transition: color 0.3s ease-in-out;
-            font-size: 0.9rem;
+            font-size: 1rem; /* Increased font size for nav */
         }
         
         nav ul li a:hover {
-            color: #555;
+            color: #007bff; /* Accent color on hover */
         }
         
         .about-me {
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
-            padding: 20px;
+            justify-content: space-around; /* Adjusted for better spacing */
+            padding: 40px; /* Increased padding */
         }
         
-        .about-text {
-            max-width: 50%;
+        .about-text h1 {
+            font-weight: 600; /* Bold font for headings */
+            color: #007bff; /* Accent color for headings */
         }
         
         .about-photo img {
-            max-width: 50%;
-            height: auto;
+            max-width: 40%; /* Adjusted image size */
             border-radius: 10px;
+        }
+        
+        /* Responsive design adjustments */
+        @media screen and (max-width: 600px) {
+            .about-me {
+                flex-direction: column;
+                text-align: center; /* Center align text for mobile */
+            }
+        
+            .about-photo img {
+                max-width: 80%; /* Larger image on small screens */
+                margin-top: 20px; /* Add space above the image */
+            }
         }
 
         @media screen and (max-width: 600px) {
