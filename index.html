@@ -70,25 +70,37 @@
                 margin-bottom: 10px;
             }
         }
-
+        .about-me {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+        
+        .about-text {
+            max-width: 50%;
+        }
+        
+        .about-photo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Optional: for rounded corners */
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="brand-name">CONNOR EVERETTS</div>
-        <nav>
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="about-me">
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p>Hi, I'm Connor Everetts. [Add more about yourself here...]</p>
+            </div>
+            <div class="about-photo">
+                <!-- Replace 'path_to_your_photo.jpg' with the actual path to your photo -->
+                <img src="path_to_your_photo.jpg" alt="Connor Everetts">
+            </div>
+        </div>
 
-    <div class="content">
-        <h1>Welcome to My Website</h1>
-        <p>Willamette 26'</p>
-    </div>
 
     <script>
         // Add your JavaScript code here
