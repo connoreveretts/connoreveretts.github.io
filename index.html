@@ -11,7 +11,7 @@
             font-weight: 600;
             font-size: 27px;
             color: #333237;
-            background: white; /* Changed to white */
+            background: white;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -21,13 +21,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: white; /* Changed to white */
+            background: white;
             padding: 10px 10px;
-            border-bottom: 1px solid #ddd; /* Thin gray line */
+            border-bottom: 1px solid #ddd;
         }
         
         .brand-name {
-            color: #333237; /* Dark color for readability */
+            color: #333237;
             font-size: 1.5rem;
         }
         
@@ -43,33 +43,18 @@
         }
         
         nav ul li a {
-            color: #333237; /* Dark color for readability */
+            color: #333237;
             text-align: center;
-            padding: 10px 12px; /* Reduced padding */
+            padding: 10px 12px;
             text-decoration: none;
             transition: color 0.3s ease-in-out;
-            font-size: 0.9rem; /* Smaller font size */
+            font-size: 0.9rem;
         }
-
         
         nav ul li a:hover {
-            color: #555; /* Slightly lighter color on hover */
+            color: #555;
         }
         
-        .content {
-            padding: 20px;
-            color: #333237; /* Dark color for readability */
-        }
-        
-        @media screen and (max-width: 600px) {
-            header {
-                flex-direction: column;
-            }
-        
-            .brand-name {
-                margin-bottom: 10px;
-            }
-        }
         .about-me {
             display: flex;
             align-items: center;
@@ -82,27 +67,53 @@
         }
         
         .about-photo img {
-            max-width: 100%;
+            max-width: 50%;
             height: auto;
-            border-radius: 10px; /* Optional: for rounded corners */
+            border-radius: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            header {
+                flex-direction: column;
+            }
+        
+            .brand-name {
+                margin-bottom: 10px;
+            }
+
+            .about-me {
+                flex-direction: column;
+            }
+
+            .about-photo img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="about-me">
-            <div class="about-text">
-                <h1>About Me</h1>
-                <p>Hi, I'm Connor Everetts. [Add more about yourself here...]</p>
-            </div>
-            <div class="about-photo">
-                <img src="Headshot.png" alt="Connor Everetts">
-            </div>
-        </div>
+        <div class="brand-name">CONNOR EVERETTS</div>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <div class="about-me">
+        <div class="about-text">
+            <h1>About Me</h1>
+            <p>Hi, I'm Connor Everetts. [Add more about yourself here...]</p>
+        </div>
+        <div class="about-photo">
+            <img src="Headshot.png" alt="Connor Everetts">
+        </div>
+    </div>
 
     <script>
-        // Add your JavaScript code here
         document.addEventListener('DOMContentLoaded', () => {
             const hour = new Date().getHours();
             const greeting = hour < 12 ? 'Good Morning' : hour < 18 ? 'Good Afternoon' : 'Good Evening';
