@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -52,29 +53,43 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     padding: 40px;
-    flex-direction: row;
     max-width: 800px;
     margin: auto;
-    text-align: center; /* Add this for centering text */
 }
 
-.about-text, .about-photo {
-    flex: 1; /* Add this so they take equal space */
+.about-text {
+    width: 50%; /* Set explicit width */
+    display: flex; /* Add flex display */
+    justify-content: center; /* Center content */
+    text-align: center; /* Center text */
+}
+
+.about-photo {
+    width: 50%; /* Set explicit width */
+    display: flex; /* Add flex display */
+    justify-content: center; /* Center content */
+}
+
+.about-photo img {
+    max-width: 100%; /* Adjust image width */
+    height: auto;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    .brand-name {
+        margin-bottom: 10px;
+    }
+
     .about-me {
         flex-direction: column;
-        align-items: center; /* Add this for center alignment in smaller screens */
     }
 
-    .about-photo img {
-        max-width: 80%;
-        margin-top: 20px;
-    }
-
-    .about-text {
-        max-width: 100%;
-        padding-right: 0;
+    .about-text, .about-photo {
+        width: 100%; /* Full width on small screens */
     }
 }
