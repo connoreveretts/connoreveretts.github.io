@@ -19,9 +19,9 @@
         </nav>
     </header>
 
-    <div class="about-me">
+    <div class="about-myself">
         <div class="about-text">
-            <h1>About Me</h1>
+            <h1>About Myself</h1>
             <p>Hi, I'm Connor Everetts. I am currently enrolled at Willamette University, pursuing a Data Science & Computer Science degree, driven to make an impact while growing my skills.</p>
         </div>
         <div class="about-photo">
@@ -29,11 +29,12 @@
         </div>
     </div>
 
+   
+
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hour = new Date().getHours();
-            the const greeting = hour < 12 ? 'Good Morning' : hour < 18 ? 'Good Afternoon' : 'Good Evening';
-            console.log(greeting);
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
         });
     </script>
 </body>
