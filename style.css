@@ -55,31 +55,17 @@ nav ul li a:hover {
     flex-direction: row;
     max-width: 800px;
     margin: auto;
+    text-align: center; /* Add this for centering text */
 }
 
-.about-text {
-    max-width: 50%;
-    padding-right: 20px;
-}
-
-.about-photo img {
-    max-width: 50%;
-    height: auto;
-    border-radius: 10px;
+.about-text, .about-photo {
+    flex: 1; /* Add this so they take equal space */
 }
 
 @media screen and (max-width: 600px) {
-    header {
-        flex-direction: column;
-    }
-
-    .brand-name {
-        margin-bottom: 10px;
-    }
-
     .about-me {
         flex-direction: column;
-        text-align: center;
+        align-items: center; /* Add this for center alignment in smaller screens */
     }
 
     .about-photo img {
