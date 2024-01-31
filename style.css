@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -48,48 +47,41 @@ nav ul li a:hover {
     color: #555;
 }
 
-.about-me {
+.about-myself {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Vertically center items */
+    justify-content: center; /* Horizontally center items */
     padding: 40px;
+    flex-direction: row; /* Default to row */
     max-width: 800px;
     margin: auto;
 }
 
-.about-text {
-    width: 50%; /* Set explicit width */
-    display: flex; /* Add flex display */
-    justify-content: center; /* Center content */
-    text-align: center; /* Center text */
-}
-
-.about-photo {
-    width: 50%; /* Set explicit width */
-    display: flex; /* Add flex display */
-    justify-content: center; /* Center content */
+.about-text, .about-photo {
+    flex: 1; /* Give equal width to text and photo sections */
+    padding: 0 20px; /* Add some padding for spacing */
 }
 
 .about-photo img {
-    max-width: 100%; /* Adjust image width */
+    max-width: 100%; /* Ensure image is responsive */
     height: auto;
     border-radius: 10px;
 }
 
-@media screen and (max-width: 600px) {
-    header {
-        flex-direction: column;
-    }
-
-    .brand-name {
-        margin-bottom: 10px;
-    }
-
+@media screen and (max-width: 768px) { /* Adjust for smaller screens */
     .about-me {
-        flex-direction: column;
+        flex-direction: column; /* Stack elements vertically on small screens */
     }
 
     .about-text, .about-photo {
-        width: 100%; /* Full width on small screens */
+        flex: none; /* Reset flex settings */
+        max-width: 100%; /* Allow each section to take full width */
+        padding: 0 20px;
     }
+
+    .about-photo img {
+        margin-top: 20px; /* Add space between text and image */
+    }
+    
 }
+
