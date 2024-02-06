@@ -121,3 +121,53 @@ nav ul li a:hover {
     gap: 20px;
     margin-top: 20px;
 }
+#portfolio {
+    padding: 40px;
+    background: white;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.job:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.job-header {
+    background: #eeeeee;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+.job-header:hover {
+    background: #e0e0e0;
+}
+
+.job-image {
+    width: 200px; /* Increased width */
+    height: 100px; /* Adjust height to make it a rectangle */
+    object-fit: cover; /* Cover the area without breaking aspect ratio */
+    margin-right: 20px;
+    border-radius: 5px; /* Slightly rounded corners for a softer look */
+}
+
+
+.job-description {
+    display: none;
+    padding: 20px;
+    line-height: 1.6; /* Improve readability */
+    border-top: 1px solid #ddd; /* Visual separation from header */
+}
