@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 header {
@@ -49,88 +50,29 @@ nav ul li a:hover {
 
 .about-myself {
     display: flex;
-    align-items: center; /* Vertically center items */
-    justify-content: center; /* Horizontally center items */
+    align-items: center;
+    justify-content: center;
     padding: 40px;
-    flex-direction: row; /* Default to row */
+    flex-direction: row;
     max-width: 800px;
     margin: auto;
 }
 
 .about-text, .about-photo {
-    flex: 1; /* Give equal width to text and photo sections */
-    padding: 0 20px; /* Add some padding for spacing */
+    flex: 1;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* ensure images are block level to prevent extra space */
 }
 
 .about-photo img {
-    max-width: 100%; /* Ensure image is responsive */
-    height: auto;
     border-radius: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .job {
-        margin-bottom: 10px;
-    }
-
-    .job-header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px;
-    }
-
-    .job-image {
-        width: 80px; /* Slightly smaller on mobile */
-        height: 40px; /* Keep the rectangle aspect ratio */
-        margin-bottom: 10px; /* Add space between image and title */
-    }
-
-    .job-date {
-        position: absolute;
-        top: 10px; /* Adjusted for smaller screen */
-        right: 10px; /* Adjusted for smaller screen */
-        padding: 3px 7px; /* Smaller padding on mobile */
-        font-size: 0.7rem; /* Smaller font size for the date */
-    }
-
-    .about-text, .about-photo {
-        padding: 0 15px;
-    }
-
-    .about-photo img {
-        width: 100%; /* Full width of the container */
-        height: auto; /* Maintain aspect ratio */
-        margin-top: 15px; /* Space between text and image */
-    }
-
-    .connect_button {
-        padding: 7px 25px;
-        font-size: 16px; /* Smaller font size */
-    }
-
-    /* Adjust nav menu for mobile */
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-    
-    /* Make the header sticky on mobile as well */
-    header.sticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-}
 .connect_button {
     text-decoration: none;
     background-color: #436f9e;
@@ -143,7 +85,7 @@ nav ul li a:hover {
     width: fit-content;
     font-family: 'Poppins', sans-serif;
     margin-top: 30px;
-    font-size: 18px; /* Adjust font size as needed */
+    font-size: 18px;
     justify-content: center;
 }
 
@@ -151,16 +93,14 @@ nav ul li a:hover {
     background-color: #4d7eb3;
 }
 
-/* Customize for GitHub and LinkedIn */
 .connect_button.github {
-    background-color: #333; /* GitHub specific color */
+    background-color: #333;
 }
 
 .connect_button.linkedin {
-    background-color: #0077B5; /* LinkedIn specific color */
+    background-color: #0077B5;
 }
 
-/* Ensure the buttons are displayed side by side */
 .social-buttons {
     display: flex;
     justify-content: center;
@@ -168,6 +108,7 @@ nav ul li a:hover {
     gap: 20px;
     margin-top: 20px;
 }
+
 #portfolio {
     padding: 40px;
     background: white;
@@ -191,7 +132,7 @@ nav ul li a:hover {
 }
 
 .job-header {
-    position: relative; /* To position the date absolutely within the header */
+    position: relative;
     background: #eeeeee;
     cursor: pointer;
     display: flex;
@@ -205,29 +146,130 @@ nav ul li a:hover {
 }
 
 .job-image {
-    width: 200px; /* Increased width */
-    height: 100px; /* Adjust height to make it a rectangle */
-    object-fit: cover; /* Cover the area without breaking aspect ratio */
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
     margin-right: 20px;
-    border-radius: 5px; /* Slightly rounded corners for a softer look */
+    border-radius: 5px;
 }
-
 
 .job-description {
     display: none;
     padding: 20px;
-    line-height: 1.6; /* Improve readability */
-    border-top: 1px solid #ddd; /* Visual separation from header */
+    line-height: 1.6;
+    border-top: 1px solid #ddd;
 }
 
 .job-date {
     position: absolute;
-    top: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
-    background: #436f9e; /* Or any other color that fits your design */
+    top: 10px;
+    right: 10px;
+    background: #436f9e;
     color: #ffffff;
     padding: 5px 10px;
-    font-size: 0.8rem; /* Smaller font size for the date */
+    font-size: 0.8rem;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .brand-name {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .about-myself {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-text, .about-photo {
+        flex: none; /* Reset flex settings */
+        width: 100%; /* Allow each section to take full width */
+        padding: 10px 0; /* Adjust padding for mobile */
+    }
+
+    .about-photo img {
+        margin: 20px auto; /* Center image and add margin on mobile */
+    }
+
+    .social-buttons {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        align-items: center;
+    }
+
+    .connect_button {
+        padding: 10px 25px; /* Adjust button padding for mobile */
+        font-size: 16px; /* Adjust font size for mobile */
+        margin: 10px 0; /* Add margin between buttons */
+    }
+
+    #portfolio {
+        padding: 20px;
+        max-width: 100%; /* Take full width of the screen */
+    }
+
+    .job {
+        margin-bottom: 10px;
+    }
+
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-image {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height automatically */
+        margin-bottom: 10px; /* Add space between image and title */
+    }
+
+    .job-date {
+        position: static; /* Make the date static inside the flex container on mobile */
+        background: transparent; /* Remove the background */
+        color: inherit; /* Inherit text color from the parent */
+        padding: 0;
+        font-size: 0.8rem;
+        margin-left: auto; /* Push the date to the right */
+        padding-right: 20px; /* Add some padding */
+    }
+
+    .job-description {
+        padding: 10px;
+    }
+}
+
+/* Additional media query for very small screens */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16px; /* Slightly smaller font size */
+    }
+
+    header {
+        padding: 10px 5%; /* Smaller padding on very small screens */
+    }
+
+    .job-header {
+        padding: 15px;
+    }
+
+    .job-date {
+        font-size: 0.7rem; /* Even smaller font size for dates */
+    }
 }
