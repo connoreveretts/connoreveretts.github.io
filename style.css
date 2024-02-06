@@ -68,21 +68,68 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-@media screen and (max-width: 768px) { /* Adjust for smaller screens */
-    .about-me {
-        flex-direction: column; /* Stack elements vertically on small screens */
+@media screen and (max-width: 768px) {
+    .job {
+        margin-bottom: 10px;
+    }
+
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .job-image {
+        width: 80px; /* Slightly smaller on mobile */
+        height: 40px; /* Keep the rectangle aspect ratio */
+        margin-bottom: 10px; /* Add space between image and title */
+    }
+
+    .job-date {
+        position: absolute;
+        top: 10px; /* Adjusted for smaller screen */
+        right: 10px; /* Adjusted for smaller screen */
+        padding: 3px 7px; /* Smaller padding on mobile */
+        font-size: 0.7rem; /* Smaller font size for the date */
     }
 
     .about-text, .about-photo {
-        flex: none; /* Reset flex settings */
-        max-width: 100%; /* Allow each section to take full width */
-        padding: 0 20px;
+        padding: 0 15px;
     }
 
     .about-photo img {
-        margin-top: 20px; /* Add space between text and image */
+        width: 100%; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 15px; /* Space between text and image */
+    }
+
+    .connect_button {
+        padding: 7px 25px;
+        font-size: 16px; /* Smaller font size */
+    }
+
+    /* Adjust nav menu for mobile */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 5px 0;
     }
     
+    /* Make the header sticky on mobile as well */
+    header.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
 }
 .connect_button {
     text-decoration: none;
@@ -144,6 +191,7 @@ nav ul li a:hover {
 }
 
 .job-header {
+    position: relative; /* To position the date absolutely within the header */
     background: #eeeeee;
     cursor: pointer;
     display: flex;
@@ -170,4 +218,16 @@ nav ul li a:hover {
     padding: 20px;
     line-height: 1.6; /* Improve readability */
     border-top: 1px solid #ddd; /* Visual separation from header */
+}
+
+.job-date {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background: #436f9e; /* Or any other color that fits your design */
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 0.8rem; /* Smaller font size for the date */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
