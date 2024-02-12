@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
 }
 
 header {
@@ -66,7 +66,7 @@ nav ul li a:hover {
 img {
     max-width: 100%;
     height: auto;
-    display: block; /* ensure images are block level to prevent extra space */
+    display: block; 
 }
 
 .about-photo img {
@@ -200,29 +200,29 @@ img {
     }
 
     .about-text, .about-photo {
-        flex: none; /* Reset flex settings */
-        width: 100%; /* Allow each section to take full width */
-        padding: 10px 0; /* Adjust padding for mobile */
+        flex: none; 
+        width: 100%;
+        padding: 10px 0; 
     }
 
     .about-photo img {
-        margin: 20px auto; /* Center image and add margin on mobile */
+        margin: 20px auto;
     }
 
     .social-buttons {
-        flex-direction: column; /* Stack buttons vertically on mobile */
+        flex-direction: column;
         align-items: center;
     }
 
     .connect_button {
-        padding: 10px 25px; /* Adjust button padding for mobile */
-        font-size: 16px; /* Adjust font size for mobile */
-        margin: 10px 0; /* Add margin between buttons */
+        padding: 10px 25px; 
+        font-size: 16px;
+        margin: 10px 0; 
     }
 
     #portfolio {
         padding: 20px;
-        max-width: 100%; /* Take full width of the screen */
+        max-width: 100%; 
     }
 
     .job {
@@ -235,19 +235,19 @@ img {
     }
 
     .job-image {
-        width: 100%; /* Full width on mobile */
-        height: auto; /* Adjust height automatically */
-        margin-bottom: 10px; /* Add space between image and title */
+        width: 100%;
+        height: auto; 
+        margin-bottom: 10px; 
     }
 
     .job-date {
-        position: static; /* Make the date static inside the flex container on mobile */
-        background: transparent; /* Remove the background */
-        color: inherit; /* Inherit text color from the parent */
+        position: static;
+        background: transparent; 
+        color: inherit;
         padding: 0;
         font-size: 0.8rem;
-        margin-left: auto; /* Push the date to the right */
-        padding-right: 20px; /* Add some padding */
+        margin-left: auto; 
+        padding-right: 20px;
     }
 
     .job-description {
@@ -255,21 +255,11 @@ img {
     }
 }
 
-/* Additional media query for very small screens */
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 16px; /* Slightly smaller font size */
-    }
+#dynamicTyping:after {
+    content: '|';
+    animation: blink 1s infinite;
+}
 
-    header {
-        padding: 10px 5%; /* Smaller padding on very small screens */
-    }
-
-    .job-header {
-        padding: 15px;
-    }
-
-    .job-date {
-        font-size: 0.7rem; /* Even smaller font size for dates */
-    }
+@keyframes blink {
+    50% { opacity: 0; }
 }
