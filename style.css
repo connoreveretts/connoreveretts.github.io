@@ -263,3 +263,152 @@ img {
 @keyframes blink {
     50% { opacity: 0; }
 }
+
+
+.project {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.project:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-header {
+    position: relative;
+    background: #eeeeee;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+.project-header:hover {
+    background: #e0e0e0;
+}
+
+.project-image {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.project-description {
+    display: none;
+    padding: 20px;
+    line-height: 1.6;
+    border-top: 1px solid #ddd;
+}
+
+.project-date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #436f9e;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .brand-name {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .about-myself {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-text, .about-photo {
+        flex: none; 
+        width: 100%;
+        padding: 10px 0; 
+    }
+
+    .about-photo img {
+        margin: 20px auto;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .connect_button {
+        padding: 10px 25px; 
+        font-size: 16px;
+        margin: 10px 0; 
+    }
+
+    #portfolio {
+        padding: 20px;
+        max-width: 100%; 
+
+    }
+
+    .project {
+        margin-bottom: 10px;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto; 
+        margin-bottom: 10px;         
+    }
+
+    .project-date {
+        position: static;
+        background: transparent; 
+        color: inherit;
+        padding: 0;
+        font-size: 0.8rem;
+        margin-left: auto; 
+        padding-right: 20px;
+    }
+
+    .project-description {
+        padding: 10px;
+    }
+}
+
+#dynamicTyping:after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+

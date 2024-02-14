@@ -5,6 +5,13 @@ document.querySelectorAll('.job-header').forEach(header => {
     });
 });
 
+document.querySelectorAll('.project-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const description = header.nextElementSibling;
+        description.style.display = description.style.display === 'block' ? 'none' : 'block';
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const textElement = document.getElementById('dynamicTyping');
     const textToType = textElement.innerText;
