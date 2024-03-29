@@ -6,7 +6,7 @@
     <title>Connor Everetts</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/supabase.min.js"></script>
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     <header>
@@ -97,15 +97,31 @@
   </section>
     <script src="portfolio-interactions.js"></script>
     <footer>
-        <div class="footer-container">
-            <div class="footer-about">
-            <div class="footer-contact">
-                <h3>Contact</h3>
-                <p>Email: <a href="mailto:connoreveretts@outlook.com">connoreveretts@outlook.com</a></p>
-                <p>Phone: <a href="tel:+15035803222">503-580-3222</a></p>
+        <div class="hidden-link-container">
+            <a href="#" class="hidden-link">Hidden Link</a>
+        </div>
+        <div class="contact-form">
+            <form id="myForm" action="https://formspree.io/f/xqkrybqj" method="POST">
+                <h3>Contact me!</h3>
+                <div class="form-row">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-row">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="_replyto" required>
+                </div>
+                <div class="form-row">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="thankYouMessage" style="display: none;">
+                Thank you for your message!
             </div>
         </div>
-    </footer>
-    <button id="scrollToTopBtn">↑ Top</button>
+    </footer>    
+    <button id="scrollToTopBtn">↑ Top</button>    
 </body>
 </html>

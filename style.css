@@ -13,12 +13,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
+    background: rgb(159, 159, 159);
     padding: 20px 30px;
     border-bottom: 2px solid #ddd;
 }
 .brand-name {
-    color: #333237;
     font-size: 2rem;
 }
 nav ul {
@@ -31,7 +30,7 @@ nav ul li {
     margin-left: 20px;
 }
 nav ul li a {
-    color: #333237;
+    color: #cfcfcf;
     text-align: center;
     padding: 10px 12px;
     text-decoration: none;
@@ -49,6 +48,7 @@ nav ul li a:hover {
     flex-direction: row;
     max-width: 800px;
     margin: auto;
+    
 }
 .about-text, .about-photo {
     flex: 1;
@@ -95,7 +95,7 @@ img {
 }
 #portfolio {
     padding: 40px;
-    background: white;
+    background: rgb(217, 217, 217);
     max-width: 800px;
     margin: auto auto 50px;
     border-radius: 10px;
@@ -447,82 +447,4 @@ img {
     color: #737373;
     font-weight: normal;
     margin-top: 5px;
-}
-footer {
-    text-align: center;
-    padding: 20px 0;
-    border-top: 2px solid #ddd;
-    color: #333237;
-    background-color: #ffffff;
-    font-size: 0.9rem;
-}
-footer a {
-    color: #436f9e;
-    text-decoration: none;
-}
-footer a:hover {
-    text-decoration: underline;
-}
-html {
-    height: 100%;
-}
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-}
-footer {
-    background-color: #333237;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-align: center;
-}
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.footer-about, .footer-contact, .footer-social {
-    flex: 1;
-    min-width: 250px;
-}
-footer h3 {
-    color: #ffffff;
-}
-footer a, .footer-contact a {
-    color: #add8e6;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-footer a:hover, .footer-contact a:hover {
-    color: #9acfea;
-    text-decoration: underline;
-}
-@media screen and (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-   }
-    .footer-about, .footer-contact, .footer-social {
-        margin: 10px 0;
-   }
-}
-#scrollToTopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #333237;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
-    opacity: 0.7;
-}
-#scrollToTopBtn:hover {
-    opacity: 1;
 }
