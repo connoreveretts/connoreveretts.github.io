@@ -142,3 +142,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+// JavaScript to dynamically set the form's action URL
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    // Prevent the form from submitting immediately
+    event.preventDefault();
+
+    // Set the action URL dynamically
+    this.action = 'https://formspree.io/f/xqkrybqj';
+
+    // Submit the form
+    this.submit();
+});
